@@ -1,0 +1,61 @@
+
+
+class Ferret {
+	
+	private String color;
+	private int age;
+	private String name;
+	
+	public String getColor() {
+		return color;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void printInfo() {
+		System.out.println("The color is: " + getColor() + ". The age is: " + getAge() + ". The name is: " + getName());
+		
+	}
+	
+	public void setInfo(String color, int age, String name) {
+		setColor(color);
+		setAge(age);
+		setName(name);
+	}
+
+}
+
+
+public class SettersAndThis {
+
+	public static void main(String[] args) {
+		
+		Ferret ferret1 = new Ferret();
+		Ferret ferret2 = new Ferret();
+		
+		ferret1.setInfo("blue", 5, "Jinxy");
+		ferret1.printInfo();
+		ferret1.setAge(7);
+		ferret1.setColor("black");
+		ferret1.printInfo();
+		
+		ferret2.setInfo("Orange", 3, "Squeaks");
+		ferret2.printInfo();
+		
+		System.out.println(ferret1.getAge());
+		System.out.println(ferret2.getColor());
+	}
+
+}
